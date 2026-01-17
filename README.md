@@ -56,5 +56,39 @@ Successfully installed MarkupSafe-3.0.3 Pillow-11.3.0 annotated-doc-0.0.4 annota
 
 4️⃣ Create CI Knowledge Base. ( From previous build run or extract it from sources)
 
-< Work in Progress >
+check the attached CI knowledge base.
 
+
+(venv) sunilpoojary@192 llm-ci-troubleshoot % python phi2_ci_helper.py 
+/Users/sunilpoojary/llm-ci-troubleshoot/llm-ci-troubleshooter/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 2 files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  6.76it/s]
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:28<00:00, 14.15s/it]
+INFO:     Started server process [21679]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50836 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50836 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50839 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50839 - "GET /openapi.json HTTP/1.1" 200 OK
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+
+(venv) sunilpoojary@192 llm-ci-troubleshoot % python phi2_ci_helper.py
+/Users/sunilpoojary/llm-ci-troubleshoot/llm-ci-troubleshooter/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:21<00:00, 10.50s/it]
+INFO:     Started server process [21889]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50876 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50876 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50878 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50878 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
