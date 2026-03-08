@@ -1,6 +1,12 @@
 # llm-ci-troubleshooter
 This project is a proof-of-concept LLM agent that analyzes CI build logs and suggests probable root causes and remediation steps.
 
+Runs locally using FastAPI and HuggingFace Transformers.
+
+# Architecture
+
+CI Logs → FastAPI API → Phi-2 Model → Suggested Fix
+
 # Pre-requisite
 1. MacOS
 2. python 3.9+
