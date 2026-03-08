@@ -1,4 +1,4 @@
-# log analysis logic
+# log analysis logic - Service Layer
 
 from app.model_loader import model, tokenizer
 
