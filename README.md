@@ -1,6 +1,12 @@
 # llm-ci-troubleshooter
 This project is a proof-of-concept LLM agent that analyzes CI build logs and suggests probable root causes and remediation steps.
 
+Runs locally using FastAPI and HuggingFace Transformers.
+
+# Architecture
+
+CI Logs → FastAPI API → Phi-2 Model → Suggested Fix
+
 # Pre-requisite
 1. MacOS
 2. python 3.9+
@@ -102,4 +108,19 @@ INFO:     127.0.0.1:50878 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404
 INFO:     127.0.0.1:50878 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
 The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
 Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+```
+
+# Example API Request
+```
+curl -X POST http://localhost:8000/analyze_ci_log/ \
+-H "Content-Type: application/json" \
+-d '{"log":"ModuleNotFoundError: No module named requests"}'
+```
+
+# Example Response
+
+```
+{
+ "suggested_fix": "Install the missing dependency using pip install requests"
+}
 ```

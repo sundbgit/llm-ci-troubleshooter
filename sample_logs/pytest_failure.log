@@ -1,0 +1,7 @@
+================================== FAILURES ==================================
+
+test_user_login
+
+E AssertionError: Login failed
+
+tests/test_login.py:45
