@@ -140,3 +140,11 @@ curl -X POST http://localhost:8000/analyze_ci_log/ \
  "suggested_fix": "Install the missing dependency using pip install requests"
 }
 ```
+# Future Improvements
+
+```
+- Add Retrieval Augmented Generation (RAG) for CI knowledge base
+- Support multiple log formats
+- Integrate with GitHub Actions failure logs
+- Stream LLM responses
+```
