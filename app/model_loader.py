@@ -1,4 +1,4 @@
-# phi2 model loading
+# phi2 model loading - LLM loading layer
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
