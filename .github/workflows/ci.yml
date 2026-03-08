@@ -1,0 +1,30 @@
+name: LLM CI Troubleshooter Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Basic Check
+        run: |
+          python -c "print('CI pipeline running successfully')"
+
+      - name: Build Docker Image
+        run: |
+          docker build -t llm-ci-troubleshooter .
