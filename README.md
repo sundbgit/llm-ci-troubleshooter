@@ -5,7 +5,23 @@ Runs locally using FastAPI and HuggingFace Transformers.
 
 # Architecture
 
-CI Logs → FastAPI API → Phi-2 Model → Suggested Fix
+
+          +-------------------+
+          |  CI Pipeline Logs |
+          +---------+---------+
+                    |
+                    v
+             +-------------+
+             | FastAPI API |
+             +------+------+
+                    |
+                    v
+             +-------------+
+             |  Phi-2 LLM  |
+             +------+------+
+                    |
+                    v
+         Suggested CI Fix / Debug Hint
 
 # Pre-requisite
 1. MacOS
